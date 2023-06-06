@@ -1,0 +1,41 @@
+{% extends 'portfolio/index.html' %}
+{% load static %}
+{% block content %}
+<main>
+    <section class="job-section">
+        <div class="container job-container">
+            <div class="job-elements">
+                <img src="{{ service.image.url }}" alt="Обложка" class="job-img">
+                <div class="job-text-background">
+                    <h2 class="job-title">
+                        {{ service.title }}
+                    </h2>
+                    <p class="job-description">
+                        {{ service.description|safe }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-contacts">
+            <div class="container">
+                <span class="section-heading">
+                    <h2 class="section-heading-text" id="my-contacts">
+                        Проект на GitHub
+                    </h2>
+                </span>
+                <div class="cards-contacts">
+                    <div class="cards-background">
+                        <ul class="card-contact-list">
+                            <li class="card-contact-list-item">
+                                <a href="{{ service.git_hub_link }}" target="_blank" class="card-contact-link">
+                                    <img src="{% static 'portfolio/logo-github.png' %}" alt="{{ service.title }}" class="card-contact-img">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </section>
+</main>
+{% endblock %}

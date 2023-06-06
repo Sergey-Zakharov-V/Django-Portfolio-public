@@ -1,0 +1,142 @@
+{% extends 'portfolio/index.html'  %}
+{% load static %}
+{% block content %}
+<main>
+    <section class="section-hero">
+        <div class="container hero-container">
+            <img src="{% static 'portfolio/avatar.jpg' %}" alt="Фотография Сергея" class="hero-avatar">
+            <div class="hero-text-background">
+                <h1 class="hero-heading">Доброго времени суток!</h1>
+                <p class="hero-text">
+                    Я начинающий разработчик <br>
+                    Мне нравится работать и развивать крутые идеи,
+                    я обожаю природу и всегда был честным и эффективным сотрудником,
+                    работал в стартапе разработчиком Python,
+                    вел свой Youtube канал, создавал игры, сайты, управлял,
+                    обучал,набирал персонал, работал в VIP тех. поддержке и многое другое.<br>
+                    <br>
+                    Мой стек:<br>
+                    • Python<br>
+                    • JavaScript<br>
+                    • SQL<br>
+                    • PostgreSQL<br>
+                    • HTML|CSS<br>
+                    • Linux<br>
+                    • Aiogram<br>
+                    • Flask<br>
+                    • Django<br>
+                    • Jinja<br>
+                    • GIT<br>
+                    <br>
+                    • В данный момент работаю на фрилансе, разрабатываю телеграм ботов, сайты и скрипты.
+                    <br><br>
+                    • С конца 2022 года работал в стартапе.<br>
+                    Стартап был организацией по круглосуточным трансляциям на стриминговые платформы.<br>
+                    Я создал bash скрипт для запуска трансляции, Python бота на микрофреймворке Aiogram, который принимал видео и аудио от пользователей, проверял, конвертировал и загружал их в плейлист для дальнейшей трансляции на стриминговые платформы.<br>
+                    <br>
+                    • С 2018 по 2019 занимался разработкой игр на языке C# Unity.<br>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-achievements">
+        <div class="container">
+            <span class="section-heading">
+                <h2 class="section-heading-text" id="my-achievements">
+                    Мои достижения
+                </h2>
+            </span>
+            <div class="cards">
+                <div class="cards-background">
+                    <ul class="card-list">
+                        {% for achievement in achievements %}
+                        <li class="card-list-item">
+                            <a href="achievement/{{ achievement.pk }}" class="card-link">
+                                <h3 class="card-heading">
+                                    {{ achievement.title }}
+                                </h3>
+                                <img src="{{ achievement.image.url }}" alt="{{ achievement.title }}" class="card-img">
+                                <p class="card-description">
+                                    {{ achievement.description|truncatechars:30 }}
+                                </p>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-services">
+        <div class="container">
+            <span class="section-heading">
+                <h2 class="section-heading-text" id="my-services">
+                    Готовые работы
+                </h2>
+            </span>
+            <div class="cards">
+                <div class="cards-background">
+                    <ul class="card-list">
+                        {% for service in services %}
+                        <li class="card-list-item">
+                            <a href="service/{{ service.pk }}" class="card-link">
+                                <h3 class="card-heading">
+                                    {{ service.title }}
+                                </h3>
+                                <img src="{{ service.image.url }}" alt="{{ service.title }}" class="card-img">
+                                <p class="card-description">
+                                    {{ service.description|truncatechars:30 }}
+                                </p>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-contacts">
+        <div class="container">
+            <span class="section-heading">
+                <h2 class="section-heading-text" id="my-contacts">
+                    Контакты
+                </h2>
+            </span>
+            <div class="cards-contacts">
+                <div class="cards-background">
+                    <ul class="card-contact-list">
+                        <li class="card-contact-list-item">
+                            <a href="https://t.me/Sergey_Zakhar0v" target="_blank" class="card-contact-link">
+                                <img src="{% static 'portfolio/logo-telegram.png' %}" alt="Телеграм Сергея" class="card-contact-img">
+                            </a>
+                        </li>
+                        <li class="card-contact-list-item">
+                            <a href="https://www.avito.ru/user/a11f16a6dec9d78902fadfdd17ae5ccd/profile?id=3015238443&src=item&page_from=from_item_card&iid=3015238443" target="_blank" class="card-contact-link">
+                                <img src="{% static 'portfolio/logo-avito.png' %}" alt="Авито Сергея" class="card-contact-img">
+                            </a>
+                        </li>
+                        <li class="card-contact-list-item">
+                            <a href="https://github.com/Sergey-Zakharov-V" target="_blank" class="card-contact-link">
+                                <img src="{% static 'portfolio/logo-github.png' %}" alt="ГитХаб Сергея" class="card-contact-img">
+                            </a>
+                        </li>
+                        <li class="card-contact-list-item">
+                            <a href="https://kwork.ru/user/kent_sz" target="_blank" class="card-contact-link">
+                                <img src="{% static 'portfolio/logo-kwork.png' %}" alt="Кворк Сергея" class="card-contact-img">
+                            </a>
+                        </li>
+                        <li class="card-contact-list-item">
+                            <a href="https://vk.com/kenthasla" target="_blank" class="card-contact-link">
+                                <img src="{% static 'portfolio/logo-vk.png' %}" alt="Вконтакте Сергея" class="card-contact-img logo-vk">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

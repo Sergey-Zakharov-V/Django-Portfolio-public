@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'portfolio/normalize.css' %}">
+    <link rel="icon" href="{% static 'portfolio/icon.png' %}" type="image/jpg">
+    <link rel="stylesheet" href="{% static 'portfolio/main.css' %}">
+    <script src="{% static 'portfolio/main.js' %}"></script>
+    <title>Портфолио</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="{% url 'main' %}" class="logo">
+                <img src="{% static 'portfolio/icon.png' %}" alt="Портфолио Захарова Сергея" class="logo-img">
+                <div class="logo-text">
+                    <h2 class="logo-text-item">
+                        Захаров Сергей
+                    </h2>
+                    <h3 class="logo-text-item">
+                        Python разработчик
+                    </h3>
+                </div>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="{% url 'main' %}#my-contacts" class="nav-link">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'main' %}#my-services" class="nav-link">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'main' %}#my-achievements" class="nav-link">Мои достижения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'main' %}" class="nav-link">Главная страница</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+{% block content %}{% endblock %}
+    <footer class="footer">
+        <div class="container footer-container">
+            <a href="" class="logo">
+                <img src="{% static 'portfolio/icon.png' %}" alt="Портфолио Захарова Сергея" class="logo-img">
+            </a>
+            <p class="copyright">© 2023 Sergey Zakharov</p>
+        </div>
+    </footer>
+</body>
+</html>

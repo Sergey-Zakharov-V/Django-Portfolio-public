@@ -1,0 +1,410 @@
+*{
+    box-sizing: border-box;
+    color: #ffffff;
+    scroll-margin-top: 125px;
+}
+
+html{
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body{
+    background-color: #000000;
+}
+
+section{
+    padding-top: 16px;
+}
+
+p{
+    line-height: 1.5em;
+}
+
+.container{
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.header-container.nav{
+    justify-content: flex-end;
+}
+
+.header-container.logo{
+    justify-content: flex-start;
+}
+
+.header-container,
+.footer-container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.copyright{
+    padding-right: 6px;
+}
+
+.section-heading{
+    display: block;
+    text-align: center;
+    background-color: #101010;
+}
+
+.section-heading-text{
+    margin: 0;
+    padding: 16px;
+}
+
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #101010;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.card-heading{
+    text-align: center;
+    height: 7vh;
+}
+
+.card-list-item{
+    display: flex;
+    padding-right: 6px;
+    padding-left: 6px;
+    flex-basis: 25%;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-description{
+    text-align: center;
+}
+
+.card-contact-list{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    flex-basis: auto;
+    background-color: #101010;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.card-contact-list-item{
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.card-contact-list-item:nth-child(1){
+    flex-basis: 15%;
+}
+
+.card-contact-list-item:nth-child(2){
+    flex-basis: 20%;
+}
+
+.card-contact-list-item:nth-child(3){
+    flex-basis: 15%;
+}
+
+.card-contact-list-item:nth-child(4){
+    flex-basis: 20%;
+}
+
+.card-contact-list-item:nth-child(5){
+    flex-basis: 14%;
+}
+
+.logo-vk{
+    border-radius: 50%;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+}
+
+.header,
+.footer{
+    height: 110px;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.logo{
+    display: flex;
+    margin-right: auto;
+    width: 100px;
+}
+
+.logo-text{
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.logo-text h2,
+.logo-text h3{
+    margin: 0;
+    white-space: nowrap;
+}
+
+.logo-text h3{
+    font-size: small;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-item{
+    margin-right: 50px;
+}
+
+.nav-link{
+    font-weight: bold;
+}
+
+.section-hero{
+    background-image: url("city.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-container{
+    padding-top: 130px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text-background{
+    max-width: 60vw;
+    background-color: rgba(6, 6, 6, 0.8);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.hero-avatar{
+    max-width: 60vw;
+    border-radius: 35px 45px;
+    margin-right: 20px;
+}
+
+.hero-heading{
+    font-size: large;
+    margin: 0;
+}
+
+.hero-text{
+    font-size: small;
+}
+
+.job-container{
+    padding-top: 130px;
+}
+
+.job-elements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.job-img{
+    max-width: 80vw;
+    max-height: 80vh;
+}
+
+.job-text-background{
+    padding-left: 50px;
+}
+
+.job-title{
+    margin: 18px 0 0 0;
+    text-align: center;
+}
+
+.job-description{
+    font-size: large;
+}
+
+@media (hover :hover) {
+    a:hover{
+    color: darkcyan;
+    }
+
+.card-contact-list-item:hover{
+    transform: scale(1.1);
+    }
+}
+
+@media (max-width: 720px) {
+    .nav{
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header-container{
+        margin: 0;
+    }
+
+    .logo-text h2{
+    font-size: medium;
+    }
+
+    .logo-text h3{
+    font-size: x-small;
+    }
+
+    .nav-list{
+        font-size: small;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav-item{
+        margin-right: 30px;
+    }
+
+    .hero-container{
+        flex-direction: column;
+        padding: 100px 0px 0px 0px;
+    }
+
+    .card-list{
+        flex-direction: column;
+    }
+
+    .hero-avatar{
+        margin: 0;
+        max-width: 80vw;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .hero-text-background{
+        max-width: 80vw;
+        border-radius: 0 0 16px 16px;
+        margin-bottom: 16px;
+    }
+
+    .hero-heading{
+        font-size: medium;
+        text-align: center;
+    }
+
+    .hero-text{
+        font-size: small;
+    }
+
+    .card-heading{
+    text-align: center;
+    height: auto;
+}
+
+    .card-img{
+        width: 80vw;
+    }
+
+    .card-contact-list-item:nth-child(1){
+        flex-basis: 25%;
+    }
+
+    .card-contact-list-item:nth-child(2){
+        flex-basis: 30%;
+    }
+
+    .card-contact-list-item:nth-child(3){
+        flex-basis: 25%;
+    }
+
+    .card-contact-list-item:nth-child(4){
+        flex-basis: 30%;
+    }
+
+    .card-contact-list-item:nth-child(5){
+        flex-basis: 24%;
+    }
+
+    .card-contact-list-item{
+        padding-right: 5px;
+        padding-left: 5px;
+        }
+
+    .job-elements{
+        flex-direction: column;
+    }
+
+    .job-img{
+        max-width: 80vw;
+        align-self: center;
+    }
+
+    .job-text-background{
+        padding: 0;
+    }
+
+    .job-title{
+        margin-top: 10px;
+        font-size: medium;
+        text-align: center;
+    }
+    .job-description{
+        font-size: small;
+    }
+}
+
+@media (min-width: 1440px){
+    .hero-text-background{
+        max-width: 60vw;
+        max-height: 70vh;
+        background-color: rgba(6, 6, 6, 0.8);
+        border-radius: 15px;
+        padding: 30px;
+    }
+
+    .hero-avatar{
+        max-width: 35vw;
+        max-height: 50vh;
+        border-radius: 35px 45px;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 2560px){
+    .hero-text-background{
+        max-width: 60vw;
+        max-height: 70vh;
+        background-color: rgba(6, 6, 6, 0.8);
+        border-radius: 15px;
+        padding: 30px;
+    }
+
+    .hero-avatar{
+        max-width: 20vw;
+        max-height: 50vh;
+        border-radius: 35px 45px;
+        margin-right: 20px;
+    }
+}
